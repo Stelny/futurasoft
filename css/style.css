@@ -380,6 +380,27 @@ h2 {
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+.career-card::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0; 
+    height: 0; 
+    border-top: 30px solid transparent;
+    border-left: 30px solid transparent;
+    border-right: 30px solid var(--primary);
+    border-bottom: 30px solid var(--primary);
+}
+.career-card::before {
+    content: url(../icons/arr.svg);
+    right: 10px;
+    bottom: 15px;
+    position: absolute;
+    z-index: 9;
 }
 .career-card:hover {
     text-decoration: none;
@@ -393,6 +414,39 @@ h2 {
     color: #898989;
     font-size: 17px;
     
+}
+.footer {
+    background: url(../images/footer.png) #0d1d59;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 4rem 0;
+}
+.footer_item {
+    display: flex;
+}
+.footer_item h3 {
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+}
+.footer_item p {
+    color: #a5a9ba;
+    font-size: 18px;
+}
+.footer_item p a {
+    color: white;
+}
+.gps-icon::before {
+    content: url(../icons/gps.svg);
+    margin-right: 1rem;
+}
+.code-icon::before {
+    content: url(../icons/code.svg);
+    margin-right: 1rem;
+}
+.helpdesk-icon::before {
+    content: url(../icons/helpdesk.svg);
+    margin-right: 1rem;
 }
 @media (max-width: 776px) { 
     h2 {
