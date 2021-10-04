@@ -423,6 +423,7 @@ h2 {
 }
 .footer_item {
     display: flex;
+    margin-bottom: 2.5rem;
 }
 .footer_item h3 {
     color: white;
