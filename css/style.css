@@ -443,10 +443,107 @@ h2 {
 .code-icon::before {
     content: url(../icons/code.svg);
     margin-right: 1rem;
+    margin-top: 0.25rem;
 }
 .helpdesk-icon::before {
     content: url(../icons/helpdesk.svg);
     margin-right: 1rem;
+}
+.sub-text {
+    min-height: 220px;
+    background: url(../images/bg.png);
+    padding: 3rem 0;
+}
+.sub-text h1 {
+    color: white;
+    font-size: 70px;
+    font-weight: 500;
+}
+.sub-text ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    list-style: none;
+} 
+.sub-text ul li {
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+}
+.sub-text ul li a {
+    color: white;
+}
+.sub-text ul li::after {
+    content: '-';
+    color: white;
+    margin: 0 0.5rem;
+}
+.sub-text ul li:last-child:after {
+    display: none;
+}
+.sub-text ul li a {
+    font-weight: 400;
+    color: white;
+}
+.subpage {
+    padding: 4rem 0;
+}
+.subpage table {
+    width: 100%;
+}
+.subpage th {
+    background: #f1f4f8;
+}
+.subpage th, .subpage td {
+    padding: 1rem 1.5rem;
+    font-size: 15px;
+    border-bottom: 1px solid #f1f4f8;
+}
+iframe {
+    max-width: 100%;
+}
+.contact-form {
+    background: #e9eef6;
+    padding: 2rem;
+    margin-top: 5rem;
+}
+.contact-form form {
+    padding: 3rem 0;
+    max-width: 1000px;
+    margin: auto;
+}
+.subpage .footer_item p, .subpage .footer_item a {
+    color: black;
+}
+.subpage .footer_item h3 {
+    color: black;
+}
+.subpage .footer_item {
+    margin-bottom: 1.5rem;
+}
+.form-input {
+    margin-bottom: 1rem;
+}
+.form-input input, .form-input textarea {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.02);
+}
+.btn-default {
+    display: flex;
+    align-items: center;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    background: var(--primary);
+    color: white;
+    font-weight: 500;
+}
+.btn-default::after {
+    content: url(../icons/ar.svg);
+    margin-left: 0.5rem;
 }
 @media (max-width: 776px) { 
     h2 {
