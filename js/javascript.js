@@ -71,21 +71,24 @@ $(document).ready(function () {
     const reference__slider = $('.reference__slider');
     reference__slider.owlCarousel({
       loop: true,
-      items: 1,
+      items: 2,
       dots: false,
       nav: false,
-      margin: 30,
+      margin: 0,
       responsive: {
         576: {
-          items: 2
+          items: 3
         },
         991: {
+          margin:30,
           items: 4
         },
         1200: {
+          margin:30,
           items: 6
         },
         1500: {
+          margin:30,
           items: 7
         }
       }

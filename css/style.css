@@ -5,10 +5,13 @@
     .homepage__item {
         height: 400px;
      }
+     .container {
+        max-width: 600px;
+    }
 }
 @media (min-width: 768px) { 
     .container {
-        max-width: 1080px;
+        max-width: 800px;
     }
     .homepage__item {
         height: 500px;
@@ -21,7 +24,7 @@
 }
 @media (min-width: 992px) { 
     .container {
-        max-width: 1080px;
+        max-width: 1000px;
     }
     .homepage__item {
         height: 500px;
@@ -30,8 +33,15 @@
 
 @media (min-width: 1200px) { 
     .container {
-        
-        max-width: 1380px;
+        max-width: 1120px;
+    }
+    .homepage__item {
+        height: 400px;
+     }
+}
+@media (min-width: 1300px) { 
+    .container {
+        max-width: 1220px;
     }
     .homepage__item {
         height: 400px;
@@ -45,8 +55,13 @@
         max-width: 1500px;
     }
 }
-
-
+.navbar-toggler {
+    border: none!important;
+    outline: none!important;
+}
+body {
+    padding-top: 93px;
+}
 :root {
     --primary: #ff5d00;
 }
@@ -56,6 +71,15 @@ img {
 
 a, a:hover {
     color: var(--primary);
+}
+.header {
+    z-index: 8999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.05);
 }
 .header nav {
     padding: 0!important;
@@ -106,13 +130,13 @@ body {
     height: 100%;
 }
 .homepage__item--text h1 {
-    font-size: clamp(40px, 10vw, 120px);
+    font-size: clamp(40px, 10vw, 90px);
     color: white;
     font-family: 'Bebas Neue', cursive;
 }
 .homepage__item--text p {
     max-width: 800px;
-    font-size: clamp(18px, 10vw, 24px);
+    font-size: clamp(18px, 10vw, 18px);
     color: white;
 }
 .homepage__slider {
@@ -156,9 +180,16 @@ h2 {
     font-size: 24px;
 }
 .text-content p {
-    font-size: 22px;
+    font-size: 18px;
     margin-bottom: 2rem;
 
+}
+.about-content {
+    max-width: 90%;
+    margin: auto;
+}
+.career ul {
+    font-size: 18px;
 }
 .bulb-icon::before {
     content: url(../icons/bulb.svg);
@@ -273,9 +304,6 @@ h2 {
 .news-item {
     margin: 0 1rem;
 }
-.carousel-content {
-    padding-top: 1rem;
-}
 .products {
     padding: 4rem 0;
 }
@@ -357,10 +385,14 @@ h2 {
     margin-top: 3rem;
     list-style: none;
     padding: 0;
-    font-size: 23px;
+    font-size: 20px;
+    line-height: 2;
 }
 .career ul li::before {
     content: url(../icons/arrow-ul.svg);
+    width: 10px;
+    height: 5px;
+    transform: scale(0.5);
     margin-right: 1rem;
 }
 .card-wrap {
@@ -546,6 +578,23 @@ iframe {
     content: url(../icons/ar.svg);
     margin-left: 0.5rem;
 }
+.h2-span {
+    font-size: 18px;
+}
+@media (max-width: 991px) { 
+
+    .carousel-content{
+        margin-top: 2rem;
+    }
+    .news, .about, .products, .reference, .career  {
+        padding: 3rem 0;
+    }
+    .product-item {
+        margin: 2rem auto;
+        max-width: unset;
+        max-width: 80%;
+    }
+} 
 @media (max-width: 776px) { 
     h2 {
         font-size: 24px;
@@ -564,6 +613,44 @@ iframe {
     .text-content p {
         font-size: 16px;
     }
+    .reference-item {
+        width: 100px;
+        height: 100px;
+        padding: 1rem;
+    }
+    .product-item {
+        margin: 0 auto;
+    }
+    .product-item-title {
+        font-size: 18px;
+    }
+    .product-item-heading {
+        font-size: 22px;
+    }
+    .product-item {
+        margin: 0;
+        max-width: unset;
+        padding: 0 1rem;
+    }
+    .product-item:hover {
+        border-color: white;
+    }
+    .product-item-image {
+        height: 140px;
+    }
+    .carousel-content {
+       margin-top: 2rem;
+       padding: 0;
+    }
+    .text-content p {
+        font-size: 14px;
+    }
+    .news-item-heading {
+        font-size: 17px;
+    }
+    .news-item-text{
+        font-size: 16px;
+    }
 }
 @media (max-width: 576px) { 
     .homepage__item {
@@ -574,5 +661,8 @@ iframe {
      }
      .career ul li {
         font-size: 16px
+     }
+     .reference-item {
+         box-shadow: none;
      }
 }
