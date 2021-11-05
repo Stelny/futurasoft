@@ -35,7 +35,7 @@ $(document).ready(function () {
       loop: true,
       nav:false, 
       dots: false,
-      margin: 30,
+      margin: 0,
       items:1,
       responsive: {
         776: {
@@ -55,7 +55,7 @@ $(document).ready(function () {
       items:1,
       dots: false,
       nav: false,
-      margin: 30,
+      margin: 0,
       responsive: {
         991: {
           items: 2
@@ -85,11 +85,11 @@ $(document).ready(function () {
         },
         1200: {
           margin:30,
-          items: 6
+          items: 5
         },
         1500: {
           margin:30,
-          items: 7
+          items: 6
         }
       }
     })

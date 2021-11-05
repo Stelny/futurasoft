@@ -4,55 +4,51 @@
 @media (min-width: 576px) { 
     .homepage__item {
         height: 400px;
-     }
-     .container {
-        max-width: 600px;
     }
+    .container {
+        max-width: 540px;
+    }
+
 }
 @media (min-width: 768px) { 
-    .container {
-        max-width: 800px;
-    }
     .homepage__item {
         height: 500px;
      }
-}
-@media (min-width: 850px) { 
-    .container {
-        max-width: 870px;
-    }
+     .container {
+        max-width: 720px;
+     }
 }
 @media (min-width: 992px) { 
-    .container {
-        max-width: 1000px;
-    }
     .homepage__item {
         height: 500px;
+     }
+     .container {
+        max-width: 960px;
      }
 }
 
 @media (min-width: 1200px) { 
-    .container {
-        max-width: 1120px;
-    }
     .homepage__item {
         height: 400px;
      }
+    .container {
+        max-width: 1140px;
+    }
 }
 @media (min-width: 1300px) { 
-    .container {
-        max-width: 1220px;
-    }
     .homepage__item {
         height: 400px;
      }
+     .container {
+        max-width: 1240px;
+    }
 }
 @media (min-width: 1400px) { 
     .homepage__item {
         height: 500px;
-     }
+    }
     .container {
-        max-width: 1500px;
+        max-width: 1340px;
     }
 }
 .navbar-toggler {
@@ -130,13 +126,13 @@ body {
     height: 100%;
 }
 .homepage__item--text h1 {
-    font-size: clamp(40px, 10vw, 90px);
+    font-size: clamp(40px, 10vw, 85px);
     color: white;
     font-family: 'Bebas Neue', cursive;
 }
 .homepage__item--text p {
     max-width: 800px;
-    font-size: clamp(18px, 10vw, 18px);
+    font-size: clamp(18px, 10vw, 21px);
     color: white;
 }
 .homepage__slider {
@@ -183,10 +179,6 @@ h2 {
     font-size: 18px;
     margin-bottom: 2rem;
 
-}
-.about-content {
-    max-width: 90%;
-    margin: auto;
 }
 .career ul {
     font-size: 18px;
@@ -246,33 +238,63 @@ h2 {
     margin-top: 3rem;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 }
-.carousel-content .news__slider, .product__slider, .reference__slider {
+.product__slider {
+    padding: 0 40px;
+}
+.news__slider {
+    padding: 0 40px;
+}
+.reference__slider {
+    padding: 0 50px;
+}
+/*.carousel-content .news__slider, .product__slider, .reference__slider {
     max-width: 90%;
     width: 100%;
-}
-.carousel-content .carousel-right, .carousel-content .carousel-left {
+}*/
+
+/*.carousel-content .carousel-right, .carousel-content .carousel-left {
     max-width: 5%;
     width: 100%;
+}*/
+
+.carousel-left {
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 50;
 }
+.carousel-right {
+    z-index: 50;
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 .carousel-right a, .carousel-left a {
     width: 60px;
     height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--primary);
+    background: #f2f5fa;
 }
 .carousel-left, .carousel-right {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.carousel-left a {
-    background: #f2f5fa;
-}
-.carousel-left a svg path {
+.carousel-left a svg path, .carousel-right a svg path {
     fill: var(--primary);
+}
+.carousel-left a:hover, .carousel-right a:hover {
+    background: var(--primary);
+}
+.carousel-left a:hover svg path, .carousel-right a:hover svg path {
+    fill: white;
 }
 .carousel-left a {
     transform: rotate(180deg)
@@ -302,7 +324,7 @@ h2 {
     font-size: 18px;
 }
 .news-item {
-    margin: 0 1rem;
+    margin: 1rem;
 }
 .products {
     padding: 4rem 0;
@@ -314,9 +336,9 @@ h2 {
     width: 100%;
     padding: 2rem;
     border-radius: 20px;
-    -webkit-box-shadow: 0px 0px 17px 5px rgba(0,0,0,0.05);
-    -moz-box-shadow: 0px 0px 17px 5px rgba(0,0,0,0.05);
-    box-shadow: 0px 0px 17px 5px rgba(0,0,0,0.05);
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.01);
+    -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.01);
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.01);
     display: flex;
     flex-direction: column;
     max-width: 370px;
@@ -414,6 +436,7 @@ h2 {
     margin-bottom: 1rem;
     position: relative;
     overflow: hidden;
+    border: 2px solid white;
 }
 .career-card::after {
     content: '';
@@ -436,6 +459,7 @@ h2 {
 }
 .career-card:hover {
     text-decoration: none;
+    border-color: var(--primary);
 }
 .career-card-heading {
     color: var(--primary);
@@ -446,6 +470,9 @@ h2 {
     color: #898989;
     font-size: 17px;
     
+}
+.footer iframe {
+    padding-left: 2.5rem;
 }
 .footer {
     background: url(../images/footer.png) #0d1d59;
@@ -485,6 +512,8 @@ h2 {
 .sub-text {
     min-height: 220px;
     background: url(../images/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     padding: 3rem 0;
 }
 .sub-text h1 {
@@ -555,6 +584,9 @@ iframe {
 .subpage .footer_item {
     margin-bottom: 1.5rem;
 }
+.subpage p {
+    font-size: 18px;
+}
 .form-input {
     margin-bottom: 1rem;
 }
@@ -581,8 +613,30 @@ iframe {
 .h2-span {
     font-size: 18px;
 }
+.navbar-brand {
+    transform: translateX(-2px);
+}
+@media (max-width: 1350px) {
+    .carousel-left {
+        left: -40px;
+        z-index: 50;
+    }
+    .carousel-right {
+        right: -40px;
+        z-index: 50;
+    }
+} 
+
+@media (min-width: 1200px) {  
+    .about .text-content, .career ul {
+        padding-left: 60px;
+    }
+}
 @media (max-width: 991px) { 
 
+    .product__slider, .news__slider, .reference__slider {
+        padding: 0;
+    }
     .carousel-content{
         margin-top: 2rem;
     }
@@ -594,6 +648,12 @@ iframe {
         max-width: unset;
         max-width: 80%;
     }
+    .carousel-left {
+        left: -60px;
+    }
+    .carousel-right {
+        right: -60px;
+    }
 } 
 @media (max-width: 776px) { 
     h2 {
@@ -603,9 +663,11 @@ iframe {
         max-width: 80%;
         width: 100%;
     }
-    .carousel-content .carousel-right, .carousel-content .carousel-left {
+   .carousel-content .carousel-right, .carousel-content .carousel-left {
         max-width: 10%;
         width: 100%;
+        position: unset;
+        transform: unset;
     }
     .product-item  {
         box-shadow: none;
